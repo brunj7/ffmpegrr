@@ -13,3 +13,8 @@ concat_clips <- function(folder, no_audio=TRUE) {
     sprintf("ffmpeg  -f concat -safe 0 -i %s/clips_list.txt -an -c copy %s/output_test_noaudio.mp4", "/Users/julien/Data/Caves/Ped\ 1/09_16_23\ 1108\ baseline","/Users/julien/Data/Caves/Ped\ 1/09_16_23\ 1108\ baseline")
           ) # does not keep the space escape
 }
+
+
+# CLI - ffmpeg  -f concat -safe 0 -i /Users/julien/Data/Caves/Ped 1/09_16_23 1108 baseline/clips_list.txt -an -c copy /Users/julien/Data/Caves/Ped 1/09_16_23 1108 baseline/output_test_noaudio.mp4
+
+
