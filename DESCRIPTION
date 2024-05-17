@@ -1,12 +1,17 @@
 Package: ffmpegrr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Concatenate GoPro Video Clips
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Date: `r Sys.Date()`
+Authors@R: c(
+              person("Julien", "Brun", 
+                 email = "jb160@ucsb.edu", 
+                 comment = c(ORCID = "0000-0002-7751-6238"),
+                 role = c("cre", "aut"))
+                 )
+Maintainer: brunj7 <jb160@ucsb.edu>
+Description: Concatenate video clips generated automatically by GoPro cameras into one continous clip using ffmpeg.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/brunj7/ffmpegrr

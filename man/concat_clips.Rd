@@ -4,12 +4,17 @@
 \alias{concat_clips}
 \title{Concatenate GoPro video clips}
 \usage{
-concat_clips(folder, no_audio = TRUE)
+concat_clips(folder_in, folder_out = folder_in, no_audio = TRUE)
 }
 \arguments{
-\item{folder}{A Character providing the path to the folder containing the video clips to stich together}
+\item{folder_in}{A Character providing the path to the folder containing the video clips to stitch together}
+
+\item{folder_out}{A Character providing the path to the folder where to save the concatenated video}
 
 \item{no_audio}{A logical dropping (TRUE) or keeping audio (FALSE)}
+}
+\value{
+A Character path to stitched video
 }
 \description{
 Concatenate GoPro video clips

@@ -1,10 +1,13 @@
 
 #' Concatenate GoPro video clips
 #'
-#' @param folder A Character providing the path to the folder containing the video clips to stich together
+#' @param folder_in A Character providing the path to the folder containing the video clips to stitch together
+#' @param folder_out A Character providing the path to the folder where to save the concatenated video
 #' @param no_audio A logical dropping (TRUE) or keeping audio (FALSE)
 #'
-#' @return
+#' @importFrom utils capture.output
+#'
+#' @return A Character path to stitched video
 #' @export
 #'
 #' @examples
@@ -12,19 +15,27 @@
 #'concat_clips("09_16_23 1108 baseline", no_audio=TRUE)
 #'}
 
-concat_clips <- function(folder, no_audio=TRUE) {
+concat_clips <- function(folder_in, folder_out = folder_in, no_audio=TRUE) {
   # get the video clips
-  video_clips <- list.files(path = folder, pattern = "MP4", full.names = TRUE)
+  video_clips <- list.files(path = folder_in, pattern = "MP4", full.names = TRUE)
   # create the clip list
   capture.output(
     for (f in video_clips) {
       cat(noquote(sprintf("file '%s'\n", f)))
       },
-    file = file.path(folder, "clips_list.txt")
+    file = file.path(folder_in, "clips_list.txt")
   )
-  system2(
-    sprintf("ffmpeg  -f concat -safe 0 -i %s/clips_list.txt -an -c copy %s/output_test_noaudio.mp4", "/Users/julien/Data/Caves/Ped\ 1/09_16_23\ 1108\ baseline","/Users/julien/Data/Caves/Ped\ 1/09_16_23\ 1108\ baseline")
-          ) # does not keep the space escape
+  # Stitch the video clips together
+  if (no_audio) {
+    system(
+      sprintf("ffmpeg  -f concat -safe 0 -i %s/clips_list.txt -an -c copy %s/output_test_noaudio.mp4", folder_in, folder_out)
+            ) # does not keep the space escape
+  }else{
+    system(
+      sprintf("ffmpeg  -f concat -safe 0 -i %s/clips_list.txt -c copy %s/output_test_noaudio.mp4", folder_in, folder_out)
+    ) # does not keep the space escape
+  }
+  return(sprintf("%s/output_test_noaudio.mp4", folder_out))
 }
 
 
