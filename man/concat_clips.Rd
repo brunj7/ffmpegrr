@@ -6,17 +6,17 @@
 \usage{
 concat_clips(
   folder_in,
-  folder_out = folder_in,
   full_video_name,
+  folder_out = folder_in,
   no_audio = TRUE
 )
 }
 \arguments{
 \item{folder_in}{A Character providing the path to the folder containing the video clips to stitch together}
 
-\item{folder_out}{A Character providing the path to the folder where to save the concatenated video}
-
 \item{full_video_name}{A Character filename for the full length video}
+
+\item{folder_out}{A Character providing the path to the folder where to save the concatenated video}
 
 \item{no_audio}{A logical dropping (TRUE) or keeping audio (FALSE)}
 }

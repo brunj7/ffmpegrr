@@ -2,8 +2,8 @@
 #' Concatenate GoPro video clips
 #'
 #' @param folder_in A Character providing the path to the folder containing the video clips to stitch together
-#' @param folder_out A Character providing the path to the folder where to save the concatenated video
 #' @param full_video_name A Character filename for the full length video
+#' @param folder_out A Character providing the path to the folder where to save the concatenated video
 #' @param no_audio A logical dropping (TRUE) or keeping audio (FALSE)
 #'
 #' @importFrom utils capture.output
@@ -16,7 +16,7 @@
 #'concat_clips("folder_in=baseline", full_video_name="baseline_full.mp4", no_audio=TRUE)
 #'}
 
-concat_clips <- function(folder_in, folder_out = folder_in, full_video_name, no_audio=TRUE) {
+concat_clips <- function(folder_in, full_video_name, folder_out = folder_in, no_audio=TRUE) {
   # get the video clips
   video_clips <- list.files(path = folder_in, pattern = "MP4", full.names = TRUE)
   # create the clip list
