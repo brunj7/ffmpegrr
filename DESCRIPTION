@@ -10,7 +10,7 @@ Authors@R: c(
                  role = c("cre", "aut"))
                  )
 Maintainer: brunj7 <jb160@ucsb.edu>
-Description: Concatenate video clips generated automatically by GoPro cameras into one continous clip using ffmpeg.
+Description: Concatenate video clips generated automatically by GoPro cameras into one continuous clip using ffmpeg.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
