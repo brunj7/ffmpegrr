@@ -26,6 +26,9 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(ffmpegrr)
 
-concat_clips(folder_in="/Users/brunj7/Data/09_16_23_1108_baseline", folder_out"/Users/brunj7/Data/", no_audio=TRUE)
+concat_clips(folder_in="/Users/brunj7/Data/09_16_23_1108_baseline", 
+   full_video_name="baseline_full.mp4", 
+   folder_out"/Users/brunj7/Data/", 
+   no_audio=TRUE)
 ```
 
