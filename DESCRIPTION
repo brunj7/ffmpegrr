@@ -11,3 +11,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/brunj7/ffmpegrr
 BugReports: https://github.com/brunj7/ffmpegrr/issues
+RoxygenNote: 7.3.1

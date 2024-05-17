@@ -1,4 +1,17 @@
 
+#' Concatenate GoPro video clips
+#'
+#' @param folder A Character providing the path to the folder containing the video clips to stich together
+#' @param no_audio A logical dropping (TRUE) or keeping audio (FALSE)
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#'concat_clips("09_16_23 1108 baseline", no_audio=TRUE)
+#'}
+
 concat_clips <- function(folder, no_audio=TRUE) {
   # get the video clips
   video_clips <- list.files(path = folder, pattern = "MP4", full.names = TRUE)
