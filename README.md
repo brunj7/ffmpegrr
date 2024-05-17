@@ -32,3 +32,10 @@ concat_clips(folder_in="/Users/brunj7/Data/09_16_23_1108_baseline",
    no_audio=TRUE)
 ```
 
+## A few things...
+
+Here are current limitations:
+- `concat_clips` does not overwrite output video, you need to delete it before rerunning the function
+- `concat_clips` does not handle spaces in path or file name at this point
+- `concat_clips` will probably not work on Windows machines at this point
+
